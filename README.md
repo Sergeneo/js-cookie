@@ -2,20 +2,30 @@
 
 Create a cookie, valid across the entire site:
 
-```Cookies.set('name', 'value');```
+```
+Cookies.set('name', 'value');
+```
 
 Create a cookie that expires 7 days from now, valid across the entire site:
 
-```Cookies.set('name', 'value', 7);```
+```
+Cookies.set('name', 'value', 7);
+```
 
 Read cookie:
 
-```Cookies.get('name');```
+```
+Cookies.get('name');
+```
 
 Read all visible cookies:
 
-```Cookies.get();```
+```
+Cookies.get();
+```
 
 Delete cookie:
 
-```Cookies.remove('name');```
+```
+Cookies.remove('name');
+```
