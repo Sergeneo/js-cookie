@@ -2,20 +2,20 @@ const Cookies = {
 	get: function(key) {
 		if (!key) {
 			let cookies = document.cookie ? document.cookie.split('; ') : [];
-      let array = {};
-      for (let i = 0; i < cookies.length; i++) {
-        let parts = cookies[i].split('=');
-        let value = parts.slice(1).join('=');
-        try {
-          let found = decodeURIComponent(parts[0]);
+			let array = {};
+			for (let i = 0; i < cookies.length; i++) {
+				let parts = cookies[i].split('=');
+				let value = parts.slice(1).join('=');
+				try {
+					let found = decodeURIComponent(parts[0]);
 					try {
 						value = JSON.parse(value);
 					} catch (e) {
 						value = value ? value : undefined;
 					}
-          array[found] = value;
-        } catch (e) {}
-      }
+					array[found] = value;
+				} catch (e) {}
+			}
 			return array;
 		}
 		let result = document.cookie.match('(^|;)\\s*'+ key +'\\s*=\\s*([^;]+)');
