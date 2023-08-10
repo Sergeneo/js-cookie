@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>js-cookie</title>
+	<style>
+	* {
+		font-size: 14px;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	}
+	p {
+		margin-bottom: 5px;
+	}
+	code {
+		background-color: #eee;
+		border-radius: 3px;
+		font-family: courier, monospace;
+		padding: 2px 5px;
+	}
+	</style>
+</head>
+<body>
+	<p>Create a cookie, valid across the entire site:</p>
+	<code>Cookies.set('name', 'value');</code>
+
+	<p>Create a cookie that expires 7 days from now, valid across the entire site:</p>
+	<code>Cookies.set('name', 'value', 7);</code>
+
+	<p>Read cookie:</p>
+	<code>Cookies.get('name');</code>
+
+	<p>Read all visible cookies:</p>
+	<code>Cookies.get();</code>
+
+	<p>Delete cookie:</p>
+	<code>Cookies.remove('name');</code>
+
+	<script src="js-cookie.js"></script>
+	<script>
+	Cookies.set('name', 1);
+	console.log( Cookies.get('name') );
+
+	Cookies.set('name', 'Test');
+	console.log( Cookies.get('name') );
+
+	Cookies.set('name', [1, 2, 3]);
+	console.log( Cookies.get('name') );
+
+	Cookies.set('name', {1: 'Test'});
+	console.log( Cookies.get('name') );
+
+	Cookies.set('name');
+	console.log( Cookies.get('name') );
+
+	Cookies.set('name', undefined);
+	console.log( Cookies.get('name') );
+
+	console.log( Cookies.get() );
+
+	console.log( Cookies.remove('name') );
+	</script>
+</body>
+</html>
